@@ -1,7 +1,7 @@
 """
-@author: Abdurrahim Burak TEKIN
+@author: TEKIN Abdurrahim Burak
 @date: 2016-11-20
-Learning how Queues work!
+-- Learning how Queues work! --
 """
 
 import threading, queue, math
