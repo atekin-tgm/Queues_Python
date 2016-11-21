@@ -78,14 +78,15 @@ class Producer(threading.Thread):
                 return False
         return True
 
-queue = queue.Queue()
-file = open("files/Queues.txt", 'w')
+if __name__ == '__main__':
+    queue = queue.Queue()
+    file = open("files/Queues.txt", 'w')
 
-producer = Producer(queue)
-consumer = Consumer(queue, file)
+    producer = Producer(queue)
+    consumer = Consumer(queue, file)
 
-producer.start()
-consumer.start()
+    producer.start()
+    consumer.start()
 
-producer.join()
-consumer.join()
+    producer.join()
+    consumer.join()

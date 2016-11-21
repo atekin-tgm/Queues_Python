@@ -11,9 +11,8 @@ Contents:
 .. toctree::
    :maxdepth: 2
 
-.. automodule:: Queues
+   Queues
 
-.. autoclass::
 Indices and tables
 ==================
 
