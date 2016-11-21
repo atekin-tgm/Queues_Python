@@ -1,0 +1,144 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Queues module &#8212; Queues 1.0 documentation</title>
+    
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="top" title="Queues 1.0 documentation" href="index.html" />
+    <link rel="prev" title="Welcome to Queues’s documentation!" href="index.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body role="document">
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-Queues">
+<span id="queues-module"></span><h1>Queues module<a class="headerlink" href="#module-Queues" title="Permalink to this headline">¶</a></h1>
+<p>&#64;author: TEKIN Abdurrahim Burak
+&#64;date: 2016-11-20
+&#8211; Learning how Queues work! &#8211;</p>
+<dl class="class">
+<dt id="Queues.Consumer">
+<em class="property">class </em><code class="descclassname">Queues.</code><code class="descname">Consumer</code><span class="sig-paren">(</span><em>queue</em>, <em>file</em><span class="sig-paren">)</span><a class="headerlink" href="#Queues.Consumer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">threading.Thread</span></code></p>
+<p>Consumer -&gt; threading.Thread
+prints the prime-numbers
+:inheritance threading.Thread:</p>
+<dl class="method">
+<dt id="Queues.Consumer.run">
+<code class="descname">run</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Queues.Consumer.run" title="Permalink to this definition">¶</a></dt>
+<dd><p>waits till the producer gets the prime-numbers and then prints + writes in file
+:return None:</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="Queues.Producer">
+<em class="property">class </em><code class="descclassname">Queues.</code><code class="descname">Producer</code><span class="sig-paren">(</span><em>queue</em><span class="sig-paren">)</span><a class="headerlink" href="#Queues.Producer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">threading.Thread</span></code></p>
+<p>Producer -&gt; threading.Thread
+sends the prime-numbers to Consumer
+:inheritance threading.Thread:</p>
+<dl class="method">
+<dt id="Queues.Producer.primenumber">
+<code class="descname">primenumber</code><span class="sig-paren">(</span><em>number</em><span class="sig-paren">)</span><a class="headerlink" href="#Queues.Producer.primenumber" title="Permalink to this definition">¶</a></dt>
+<dd><p>Looks if the given parameter number is a prime number and returns a Boolean.
+Idea from the method came from the website <a class="reference external" href="http://stackoverflow.com/questions/18833759/python-prime-number-checker">http://stackoverflow.com/questions/18833759/python-prime-number-checker</a>
+:param int number: Takes a number
+:return bool is_prime: Returns a Boolean to see if the given number is a prime number</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Queues.Producer.run">
+<code class="descname">run</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Queues.Producer.run" title="Permalink to this definition">¶</a></dt>
+<dd><p>method primenumber is called
+if number = prime, then True -&gt; puts in queue
+:return None:</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="index.html" title="previous chapter">Welcome to Queues&#8217;s documentation!</a></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/Queues.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2016, atekin.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.4.8</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.9</a>
+      
+      |
+      <a href="_sources/Queues.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
